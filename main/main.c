@@ -38,7 +38,7 @@ void send_random_numbers_task(void *pvParameter) {
         snprintf(message, sizeof(message), "%d\n", random_num);
         uart_write_bytes(UART_NUM, message, strlen(message));
 
-        vTaskDelay(100 / portTICK_PERIOD_MS);  // Send a number every second
+        vTaskDelay(1000 / portTICK_PERIOD_MS);  // Send a number every second
     }
 }
 
